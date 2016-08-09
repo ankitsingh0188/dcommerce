@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function sbi_custom_node_view_alter(&$build) {
+  $node = $build['#node'];
+  if($node->type == 'sbi_premium') {
+  	// die;
+  	$product = commerce_product_load($node->field_product_insurance['und'][0]['product_id']);
+  	$product->commerce_price['und'][0]['amount'] = "120000";
+    // $product->commerce_price['und'][0]['original']['amount'] = '20000';
+    // $product->commerce_price['und'][0]['data']['components'][0]['price']['amount'] = '20000';
+    commerce_product_save($product);
+  }
+}
+
+function sbi_custom_preprocess_commerce_line_item_summary(&$variables) {
+  $variables['total'] = $variables['total_raw'] . 'INR';
+}
+
+
+?>

@@ -1,0 +1,4 @@
+name = SBI Custom
+description = Custom module for SBI.
+core = 7.x
+scripts[] = js/sbi_custom.js
