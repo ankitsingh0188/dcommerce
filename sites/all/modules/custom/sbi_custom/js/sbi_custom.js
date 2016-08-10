@@ -6,7 +6,6 @@
 (function ($) {
   Drupal.behaviors.sbi_custom = {
     attach: function (context) {
-      console.log('here');
       $('.avail_discount_voluntary_yes').hide();
       $('.avail_discount_voluntary #edit-avail-discount-voluntary').change(function() {
         var result = this.value; // or $(this).val()
@@ -14,10 +13,17 @@
           $('.avail_discount_voluntary_yes').show();
         }
       });
-      // $('.calc_premium').click(function(event) {
-      //   event.preventDefault();
-      //   alert("Your Premium is Rs : 1 Lakh.");
-      // });
+      // SBI Premium js starts here.
+      $('.form-radio').change(function() {
+        $('#edit-actions #edit-next').click();
+      });
     }
   };
 })(jQuery);
+
+$(document).load(function() {
+  // SBI Premium js starts here.
+  $('.form-radio').change(function() {
+    $('#edit-actions #edit-next').click();
+  });
+})
