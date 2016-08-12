@@ -1,0 +1,83 @@
+/**
+ * Style
+ */
+
+.sbi_premier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  li {
+    margin: 2%;
+    flex-basis: 16%;
+  }
+  a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 5px;
+    color: #989898;
+    border: 1px solid transparent;
+    &:before {
+      font-family: 'fontawesome';
+      font-size: 24px;
+    }
+    &:hover {
+      color: #0187C6;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
+    }
+  }
+}
+.front {
+  .grid-8 {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+}
+.zone-preface {
+  padding: 0;
+}
+
+.sbi-icon-car {
+  @extend .icon-automobile;
+}
+.sbi-icon-bike {
+  @extend .icon-motorcycle;
+}
+.sbi-icon-health {
+  @extend .icon-heartbeat;
+}
+.sbi-icon-home {
+  @extend .icon-home;
+}
+.sbi-icon-travel {
+  @extend .icon-plane;
+}
+.sbi-icon-accident {
+  @extend .icon-wheelchair;
+}
+.sbi-icon-hospital {
+  @extend .icon-money;
+}
+.sbi-icon-illness {
+  @extend .icon-ambulance;
+}
+.sbi-icon-arogya {
+  @extend .icon-hospital-o;
+}

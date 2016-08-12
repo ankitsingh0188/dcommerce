@@ -52,7 +52,7 @@ function sbi_custom_block_view($delta = '') {
     case 'sbi_premium_block':
       $block['subject'] = t('');
       $block['content'] = _sbi_custom_premium_block();
-      break;    
+      break;
   }
   return $block;
 }
@@ -61,7 +61,7 @@ function _sbi_custom_premium_block() {
   $html = '';
   $html .= '<div>';
   $html .= '<ul class="sbi_premier">';
-  $html .= '<li><a href="#">Car</a></li><li><a href="#">2-Wheeler</a></li><li><a href="#">Health</a></li><li><a href="#">Home</a></li><li><a href="node/add/sbi-premium">Travel</a></li><li><a href="#">Personal Accident</a></li><li><a href="#">Hospital Criticl Illness</a></li><li><a href="#">Arogya Premier</a></li>';
+  $html .= '<li><a href="#" class="sbi-icon-car">Car</a></li><li><a href="#" class="sbi-icon-bike">2-Wheeler</a></li><li><a href="#" class="sbi-icon-health">Health</a></li><li><a href="#" class="sbi-icon-home">Home</a></li><li><a href="node/add/sbi-premium" class="sbi-icon-travel">Travel</a></li><li><a href="#" class="sbi-icon-accident">Personal Accident</a></li><li><a href="#" class="sbi-icon-hospital">Hospital Daily Cash</a></li><li><a href="#" class="sbi-icon-illness">Criticl Illness</a></li><li><a href="#" class="sbi-icon-arogya">Arogya Premier</a></li>';
   $html .= '</ul>';
   $html .= '</div>';
 
