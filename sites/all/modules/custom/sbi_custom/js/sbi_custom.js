@@ -21,9 +21,11 @@
   };
 })(jQuery);
 
-$(document).load(function() {
+(function ($) {
+$(window).load(function() {
   // SBI Premium js starts here.
   $('.form-radio').change(function() {
     $('#edit-actions #edit-next').click();
+    });
   });
-})
+})(jQuery);

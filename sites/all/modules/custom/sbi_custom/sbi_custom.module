@@ -1,16 +1,12 @@
 <?php
 
 /**
- * Implements hook_node_view_alter().
+ * Implements hook_node_presave().
  */
-function sbi_custom_node_view_alter(&$build) {
-  $node = $build['#node'];
+function sbi_custom_node_presave($node) {
   if($node->type == 'sbi_premium') {
-  	// die;
-  	$product = commerce_product_load($node->field_product_insurance['und'][0]['product_id']);
-  	$product->commerce_price['und'][0]['amount'] = "120000";
-    // $product->commerce_price['und'][0]['original']['amount'] = '20000';
-    // $product->commerce_price['und'][0]['data']['components'][0]['price']['amount'] = '20000';
+    $product = commerce_product_load($node->field_product_insurance['und'][0]['product_id']);
+   $product->commerce_price['und'][0]['amount'] = "1200";
     commerce_product_save($product);
   }
 }
@@ -25,8 +21,10 @@ function sbi_custom_preprocess_commerce_line_item_summary(&$variables) {
 function sbi_custom_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'sbi_premium_node_form':
-    // $form['title_field']['und'][0]['value']['#default_value'] = 'Bye';
-      break;
+    $form['actions']['submit']['#value'] = "Calculate Premium";
+      $form['actions']['preview']['#access'] = FALSE;
+      $form['field_product_insurance']['#access'] = FALSE;
+    break;
   }
 }
 
@@ -66,6 +64,12 @@ function _sbi_custom_premium_block() {
   $html .= '</div>';
 
   return $html;
+}
+
+function sbi_custom_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+  if($entity_form['#entity']->type == 'sbi_premier') {
+    $entity_form['commerce_price']['und'][0]['amount']['#default_value'] = '100';
+  }
 }
 
 ?>
