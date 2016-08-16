@@ -1,7 +1,5 @@
 /**
- * @file$("#datepicker").datepicker({ maxDate: new Date, minDate: new Date(2007, 6, 12) });
- 
- * A javascript file for the package page.
+ * A javascript file for the sbi premium.
  */
 (function ($) {
   Drupal.behaviors.sbi_custom = {
