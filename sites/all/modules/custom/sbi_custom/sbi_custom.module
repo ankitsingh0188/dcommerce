@@ -21,6 +21,7 @@ function sbi_custom_preprocess_commerce_line_item_summary(&$variables) {
 function sbi_custom_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
     case 'sbi_premium_node_form':
+    $form['title_field']['#access'] = FALSE;
     $form['actions']['submit']['#value'] = "Calculate Premium";
       $form['actions']['preview']['#access'] = FALSE;
       $form['field_product_insurance']['#access'] = FALSE;

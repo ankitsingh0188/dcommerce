@@ -35,9 +35,9 @@ body.toolbar #toolbar-home a:hover {
 body.toolbar #toolbar-home a span {
   background: transparent url("images/logo-menu.png") no-repeat 0 0;
   display: block;
-  min-height: 40px;
+  min-height: 50px;
   text-indent: -9999px;
-  width: 130px;
+  width: 205px;
   margin: 0;
 }
 /* User Menu */
