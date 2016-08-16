@@ -1,0 +1,450 @@
+/**
+ * Custom SCSS
+ */
+@import "_fonts.scss";
+/*
+ Hide Options
+ */
+.page-node-add-sbi-premium {
+  .field-widget-options-buttons {
+    input[type="radio"].form-radio {
+      display: none;
+    }
+    input[type="radio"].form-radio:checked + label {
+      color: #0187C6;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #ccc;
+      &:before {
+
+      }
+    }
+  }
+  .form-actions {
+    display: none;
+  }
+  .field-name-field-mobile + .form-actions {
+    display: block;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: none !important;
+    #edit-preview {
+      display: none;
+    }
+  }
+  .step-twelve {
+    h3 {
+      padding: 0;
+      color: #0187C6;
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+  }
+  .field-name-field-my-family-annual-income-is,
+  .field-name-field-who-is-the-second-travelle,
+  .field-name-field-who-is-the-first-traveller,
+  .field-name-field-how-many-travellers-are-go,
+  .field-name-field-country-of-maximum-stay-,
+  .field-name-field-are-you-travelling-to-us-c,
+  .field-name-field-what-type-of-trip-are-you-,
+  .field-name-field-select-maximu-duration-of-,
+  .field-name-field-select-the-policy-option,
+  .field-name-field-select-the-product-type {
+    .form-item {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .form-type-radios {
+      & > label {
+        padding: 0;
+        color: #0187C6;
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 20px;
+      }
+    }
+    .form-radios {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      list-style: none;
+      margin: 0 auto;
+      padding: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      text-align: center;
+    }
+    .form-type-radio {
+      margin: 2%;
+      flex-basis: 29.3333%;
+      .option {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        padding: 10px;
+        color: #989898;
+        border: 1px solid transparent;
+        &:before {
+          position: relative;
+          top: auto;
+          left: auto;
+          display: block;
+          height: 42px;
+          width: 42px;
+          margin-bottom: 5px;
+          border: 0 none;
+          border-radius: 0;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+        }
+        &:hover {
+          color: #0187C6;
+          border: 1px solid #ccc;
+          box-shadow: 1px 1px 1px #ccc;
+          &:before {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  .field-name-field-my-family-annual-income-is,
+  .field-name-field-who-is-the-second-travelle,
+  .field-name-field-who-is-the-first-traveller,
+  .field-name-field-select-maximu-duration-of-,
+  .field-name-field-how-many-travellers-are-go,
+  .field-name-field-are-you-travelling-to-us-c {
+    .form-type-radio {
+      .option {
+        font-size: 28px;
+        line-height: 36px;
+        &:before {
+          display: none;
+        }
+        &:hover {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#edit-field-select-the-product-type-und-individual {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/individual-product-type.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/individual-product-type-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/individual-product-type-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-select-the-product-type-und-family-individual {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/family-individual.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/family-individual-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/family-individual-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-select-the-product-type-und-family-floater {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/family-floater.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/family-floater-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/family-floater-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-select-the-policy-option-und-single-trip {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/single-trip.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/single-trip-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/single-trip-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-select-the-policy-option-und-multiple-trip {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/multi-trip.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/multi-trip-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/multi-trip-hover.png");
+    }
+  }
+}
+// -- -- --
+//
+#edit-field-what-type-of-trip-are-you-und-holiday-pleasure {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/holiday-pleasure.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/holiday-pleasure-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/holiday-pleasure-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-what-type-of-trip-are-you-und-business {
+  & + .option {
+    @extend .icon-briefcase;
+    &:before {
+      font-family: 'fontawesome';
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
+      color: #989898;
+      background: none;
+    }
+    &:hover {
+      &:before {
+        color: #0187C6;
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      color: #0187C6;
+    }
+  }
+}
+// -- -- --
+#edit-field-what-type-of-trip-are-you-und-medical {
+  & + .option {
+    @extend .icon-medkit;
+    &:before {
+      font-family: 'fontawesome';
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
+      color: #989898;
+      background: none;
+    }
+    &:hover {
+      &:before {
+        color: #0187C6;
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      color: #0187C6;
+    }
+  }
+}
+// -- -- --
+#edit-field-what-type-of-trip-are-you-und-adventure-sports {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/adventure-sport.png");
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/adventure-sport-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/adventure-sport-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-what-type-of-trip-are-you-und-other {
+  & + .option {
+    @extend .icon-asterisk;
+    &:before {
+      font-family: 'fontawesome';
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
+      color: #989898;
+      background: none;
+    }
+    &:hover {
+      &:before {
+        color: #0187C6;
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      color: #0187C6;
+    }
+  }
+}
+// -- -- --
+#edit-field-country-of-maximum-stay-und-others {
+  & + .option {
+    @extend .icon-asterisk;
+    &:before {
+      font-family: 'fontawesome';
+      font-size: 32px;
+      width: 32px;
+      height: 32px;
+      color: #989898;
+      background: none;
+    }
+    &:hover {
+      &:before {
+        color: #0187C6;
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      color: #0187C6;
+    }
+  }
+}
+// -- -- --
+#edit-field-country-of-maximum-stay-und-usa {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/uk.png");
+      border: 1px solid #ddd;
+      border-radius: 100%;
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/uk-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/uk-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-country-of-maximum-stay-und-australia {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/australia.png");
+      border: 1px solid #ddd;
+      border-radius: 100%;
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/australia-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/australia-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-country-of-maximum-stay-und-thailand {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/thailand.png");
+      border: 1px solid #ddd;
+      border-radius: 100%;
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/thailand-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/thailand-hover.png");
+    }
+  }
+}
+// -- -- --
+#edit-field-country-of-maximum-stay-und-singapore {
+  & + .option {
+    &:before {
+      background-image: url("../images/demo/singapore.png");
+      border: 1px solid #ddd;
+      border-radius: 100%;
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/demo/singapore-hover.png");
+      }
+    }
+  }
+  &:checked + .option {
+    &:before {
+      background-image: url("../images/demo/singapore-hover.png");
+    }
+  }
+}
+// -- -- --
