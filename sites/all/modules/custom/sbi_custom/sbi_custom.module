@@ -73,4 +73,21 @@ function sbi_custom_inline_entity_form_entity_form_alter(&$entity_form, &$form_s
   }
 }
 
+function sbi_custom_commerce_order_presave($order) {
+  $line_item_id = $order->commerce_line_items['und'][0]['line_item_id'];
+  $line_item_load = commerce_line_item_load($line_item_id);
+  $product_id = $line_item_load->commerce_product['und'][0]['product_id'];
+  if($product_id) {   
+    $query = db_select('field_data_field_product_insurance', 'fpi')
+    ->fields('fpi', array('entity_id '))
+    ->condition('entity_type', 'node', '=')
+    ->condition('bundle', 'sbi_premium', '=')
+    ->condition('field_product_insurance_product_id', $product_id, '=')
+    ->execute()
+    ->fetchAll();
+    $result = $query[0]->entity_id;
+    $order->field_node_info[LANGUAGE_NONE][0]['target_id'] = $result; 
+  }
+}
+
 ?>
